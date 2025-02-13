@@ -28,7 +28,7 @@ public class Main {
 
         try {
             numero = Integer.parseInt(br.readLine());
-            System.out.println("Ok, procediamo");
+            System.out.println("Eseguo la connessione");
         } catch (IOException e) {
             System.err.println("Errore nell'inserimento del numero ");
         }

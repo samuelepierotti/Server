@@ -38,6 +38,8 @@ public class Main {
             System.out.println("Client num."+i);
 
             s.attendi();
+            s.scrivi();
+            s.leggi();
             s.chiudi();
             i++;
         }

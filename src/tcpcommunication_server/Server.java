@@ -105,12 +105,15 @@ public class Server {
     }
 
     public void termina(){
-        try {
-            serverSocket.close();
-            System.out.println("4) Chiusura del DataSocket (server) avvenuta con successo, il server non accetta più connessioni");
-        } catch (IOException e) {
-            System.err.println("Errore durante la chiusura del server socket");
+        if(serverSocket != null){
+            try {
+                serverSocket.close();
+                System.out.println("4) Chiusura del DataSocket (server) avvenuta con successo, il server non accetta più connessioni");
+            } catch (IOException e) {
+                System.err.println("Errore durante la chiusura del server socket");
+            }
+        } else {
+            System.out.println("La server socket non può essere chiusa perché non è stata istanziata");
         }
-    } else {
-        System.out.println("La server socket non può essere chiusa perché non è stata istanziata");
+    }
 }
